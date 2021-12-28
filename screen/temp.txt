@@ -1,0 +1,141 @@
+
+                <View style={{ flexDirection: 'column', height: "20%", backgroundColor: "#be2430", padding: 10 }}>
+
+                    <View style={{ backgroundColor: "#be2430" }}>
+
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+
+                            <View style={{ flexDirection: 'column' }}>
+
+                                <Text style={{ color: "#c6c6c6", fontSize: 10, fontWeight: "500" }}>Good Morning</Text>
+                                <Text style={{ color: "#fff", fontSize: 13, fontWeight: "bold" }}>Shubham Chauhan</Text>
+
+                            </View>
+                            <View style={{}}>
+
+                                <Image
+                                    style={{ width: 15, height: 20, top: 5 }}
+                                    source={require('../assets/alarm.png')} />
+                            </View>
+                        </View>
+
+                        <View style={{ alignItems: 'center', backgroundColor: "#fff", borderRadius: 15, padding: 5, marginTop: 15, flexDirection: 'row' }}>
+
+                            <Image
+                                style={{ width: 15, height: 15, left: 20 }}
+                                source={require('../assets/search.png')}
+                            />
+
+                            <TextInput
+                                style={{ marginLeft: 30, bottom: 5, width: "100%", padding: 2, backgroundColor: '#fff', borderColor: '#fff' }}
+                                placeholder="Search Here"
+                            />
+
+                        </View>
+
+                    </View>
+
+
+
+
+                    <View style={{ backgroundColor: "#d6d6d6", borderRadius: 15, padding: 0, marginTop: 20, flexDirection: 'row' }}>
+
+                        <Image
+                            style={{ width: "100%", height: 120, left: 0, padding: 0, borderRadius: 10 }}
+                            source={require('../assets/banner.png')}
+                        />
+                    </View>
+
+                    <View style={{ flexDirection: 'row', top: 20, justifyContent: 'space-between', marginLeft: 0, marginRight: 0 }}>
+
+                        <Text style={{ color: '#000', fontSize: 15, fontWeight: 'bold' }}>Counsellers</Text>
+                        <Text style={{ color: '#000', fontSize: 10, fontWeight: '500' }}>View All {'>'}</Text>
+
+                    </View>
+
+                    {/* // using map for counsellers */}
+
+                    <View style={{ borderWidth: 0, marginTop: 10 }}>
+
+                        <FlatList
+                            data={counsellers}
+                            horizontal
+                            showsHorizontalScrollIndicator={false}
+                            keyExtractor={(x) => '${x.id}'}
+                            renderItem={renderCounsellers}
+                        />
+
+                    </View>
+
+
+                    <View style={{ flexDirection: 'row', top: 20, justifyContent: 'space-between', marginLeft: 0, marginRight: 0 }}>
+                        <Text style={{ color: '#000', fontSize: 15, fontWeight: 'bold' }}> Popular Counsellers</Text>
+                        <Text style={{ color: '#000', fontSize: 10, fontWeight: '500' }}>View All {'>'}</Text>
+
+                    </View>
+
+
+
+
+                    {/* Popular Councellrs */}
+
+
+
+                    <View style={{ marginTop: 30, flexDirection: 'row', backgroundColor: "#d6d6d6", padding: 10 }}>
+
+                        <Image
+                            style={{ width: "30%", height: 120, left: 0, padding: 0, borderRadius: 10 }}
+                            source={{ uri: "https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhdXR5JTIwZ2lybHN8ZW58MHx8MHx8&w=1000&q=80" }}
+                        />
+
+                        <View style={{ flexDirection: "column", marginLeft: 20, borderWidth: 1, flex: 1 }}>
+
+                            <Text style={{ fontSize: 15, fontWeight: "700" }}>Shubham Chauhan</Text>
+
+                            <View style={{ marginStart: 10, flexDirection: 'row' }}>
+
+
+                                <Image
+                                    style={{ width: 15, height: 10, top: 5 }}
+                                    source={require('../assets/gmail.png')} />
+
+                                <Text style={{ fontSize: 15, fontWeight: "700", marginLeft: 10 }}>Shubham Chauhan</Text>
+
+
+                            </View>
+
+
+                        </View>
+
+
+                    </View>
+
+
+                    <View style={{ flexDirection: 'row', top: 20, justifyContent: 'space-between', marginLeft: 0, marginRight: 0 }}>
+                        <Text style={{ color: '#000', fontSize: 15, fontWeight: 'bold' }}> Ration Counsellers</Text>
+                        <Text style={{ color: '#000', fontSize: 10, fontWeight: '500' }}>View All {'>'}</Text>
+
+                    </View>
+
+
+
+                    {/* Rative Councellrs */}
+                    <View style={{ borderWidth: 0, marginTop: 10 }}>
+
+                        <FlatList
+                            data={counsellers}
+                            horizontal
+                            showsHorizontalScrollIndicator={false}
+                            keyExtractor={(x) => '${x.id}'}
+                            renderItem={renderCounsellers}
+                        />
+
+                    </View>
+
+                    <View>
+
+                    </View>
+
+
+
+                </View>
